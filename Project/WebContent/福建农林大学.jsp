@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>福建师范大学</title>
+<title>福建农林大学</title>
 <link href="css/style.css" rel="stylesheet"/>
 </head>
 <body>
@@ -18,7 +18,7 @@
      try{
      	con=DBConnection.getConnection();
      	statement=con.createStatement();
-     	String lost="select * from card_hunting where School='福建师范大学'";
+     	String lost="select * from card_hunting where School='福建农林大学'";
      	rs=statement.executeQuery(lost);
      	while(rs.next()){
      		Owner owner=new Owner();
@@ -29,7 +29,7 @@
      		owner.setOwnerSchool(rs.getString(5));
      		owners.add(owner);
      	}
-     	String found="select * from card_founding where ownerSchool='福建师范大学'";
+     	String found="select * from card_founding where ownerSchool='福建农林大学'";
      	rs.close();
      	rs=statement.executeQuery(found);
      	while(rs.next()){
@@ -67,10 +67,10 @@
  </table>
 </div>
 <div style="width:1000px;
-	height:268px;
+	height:253px;
 	margin:0px auto;
 	text-align:center;">   
-    <img src="images/福建师范大学.jpg" width='1000' height='268'>  
+    <img src="images/福建农林大学.jpg" width='1000' height='253'>  
 </div>
 <div style="margin:0px auto;
 	width:1000px;

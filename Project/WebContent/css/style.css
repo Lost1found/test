@@ -5,23 +5,23 @@ body, ul, li, td { margin:0;padding:0; }/* µ¼º½ ,È¥µôbody£¬ul£¬li£¬tdËÄÖÜ×Ô´øµÄ±
 .table1 { 
 	margin: 0px auto;            /*¾ÓÖÐ*/
 	border-collapse: collapse;  /*ºÏ²¢±ß¿ò*/
-	color:white;               /*×ÖÌåÑÕÉ«*/ 
+	color:#000000;               /*×ÖÌåÑÕÉ«*/ 
 	font-size: 20px;           /*×ÖÌå´óÐ¡*/
 }
-td { 
+.table2{
+	margin:0px auto;
+	color:#000000;
+	font-size:20px;
+	cellspacing:0px;
+	cellpadding:4px;
+	
+}
+.table1 td { 
 	border-right:1px solid #c0c0c0;     /*¿í¶È¡¢ÊµÏß¡¢»ÒÉ«*/
 	width:150px;
 	height:50px;
 	text-align: center; 
 	height:40px;	
-}
-th{
-	width:500px;
-	height:50px;
-	color:#000000;
-	bgcolor:#faead1;
-	text-align: center;
-	font-size:20px; 
 }
 a:link {
 	font-family: "¿¬Ìå";
@@ -58,9 +58,11 @@ a:active {
 	background-color:#ffffff;
 }
 #content { 
-	margin:10px auto;
+	margin:0px auto;
 	width:1000px;
 	height:500px; 
+	color:#000000;
+	text-align:center;
 }
 #leftC { 
 	width:250px;
@@ -73,6 +75,7 @@ a:active {
 h1{
 	front-family:ËÎÌå;
 	font-size:40px;
+	margin-right:100px;
 }
 /*ÖÐ¼äÓ¦¸Ã·ÅÍ¼Æ¬µÄ²¿·Ö*/
 #middle{
@@ -82,8 +85,17 @@ h1{
 	line-height:150px;
 	width:100%;
 	height:200px;
-	background-color: #a6d9f7;
+	background-color: #d8d8d8;
 }
+#our{
+	font-size:20px;
+	font-family:ËÎÌå;
+	text-align:left;
+	width:1000px;
+	height:600px;
+	background-color: #fffbdf;
+}
+
 /*½áÎ²À¸*/
 #footer { 
 	height:30px;
@@ -97,13 +109,14 @@ h1{
 #school{
 	width:1000px;
 	height:300px;
-	background: url(/images/¸£½¨Ê¦·¶´óÑ§.png) no-repeat center ;
+	background-image:url(../images/¸£½¨Ò½¿Æ´óÑ§.jpg);
 	margin:0px auto;
 	margin-top:50px;
+	text-align:center;
+	display:block;
 	
 }
 #middleC{
 	float: left;
-	width:500px;
 	margin-left:100px;
 }

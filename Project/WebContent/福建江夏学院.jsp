@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>福建师范大学</title>
+<title>福建江夏学院</title>
 <link href="css/style.css" rel="stylesheet"/>
 </head>
 <body>
@@ -18,7 +18,7 @@
      try{
      	con=DBConnection.getConnection();
      	statement=con.createStatement();
-     	String lost="select * from card_hunting where School='福建师范大学'";
+     	String lost="select * from card_hunting where School='福建江夏学院'";
      	rs=statement.executeQuery(lost);
      	while(rs.next()){
      		Owner owner=new Owner();
@@ -29,7 +29,7 @@
      		owner.setOwnerSchool(rs.getString(5));
      		owners.add(owner);
      	}
-     	String found="select * from card_founding where ownerSchool='福建师范大学'";
+     	String found="select * from card_founding where ownerSchool='福建江夏学院'";
      	rs.close();
      	rs=statement.executeQuery(found);
      	while(rs.next()){
@@ -67,40 +67,37 @@
  </table>
 </div>
 <div style="width:1000px;
-	height:268px;
+	height:295px;
 	margin:0px auto;
 	text-align:center;">   
-    <img src="images/福建师范大学.jpg" width='1000' height='268'>  
+    <img src="images/福建江夏学院.jpg" width='1000' height='295'>  
 </div>
 <div style="margin:0px auto;
 	width:1000px;
 	height:450px; 
 	color:#000000;
 	text-align:center;">
-    <table align='left' cellspacing='0' cellpadding='4' width='1000' border='1' bgcolor='#efefef'>
+    <table align='center' cellspacing='0' cellpadding='4' width='1000' border='1' bgcolor='#efefef'>
      <tr>
      <th bgcolor='#fae6b8'>失卡招领</th>
      <th bgcolor='#fae6b8'>寻卡启事</th>
      </tr>
      <tr>
-     <td color='#000000' width='500' height='430' text-align='left'>
+     <td color='#000000' width='500' height='430'>
      <%
-        int i=1;
-        for(Picker p:pickers){
-        	out.print(i+"<br>"+"卡号："+p.getCard()+",  姓名："+p.getOwnerName()+",  学校："+p.getOwnerSchool()
-        	+",<br>"+"  拾卡人："+p.getPickerName()+",  拾卡地点："+p.getPickPlace()+"<br>"+
-            ",  拾卡时间："+p.getPicktime()+",  拾卡者电话："+p.getPickerPhone()+"<br>");
-            i++;
-        } 
+        for(Owner w:owners){
+            out.print("卡号："+w.getCardID()+"姓名："+w.getOwnerRealName()
+            +"学校："+w.getOwnerSchool()+"联系电话"+w.getOwnerPhone());
+        }
+     
      %>
      </td>
      <td color='#000000' width='500' height='430'>
      <%
         for(Owner w:owners){
-            out.print("卡号："+w.getCardID()+"  姓名："+w.getOwnerRealName()
-            +"  学校："+w.getOwnerSchool()+"  联系电话"+w.getOwnerPhone());
-        }
-     
+            out.print("卡号："+w.getCardID()+"姓名："+w.getOwnerRealName()
+            +"学校："+w.getOwnerSchool()+"联系电话"+w.getOwnerPhone());
+        }    
      %>
      </td>
      </tr>

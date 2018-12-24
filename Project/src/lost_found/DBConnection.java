@@ -7,9 +7,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DBConnection {
-	private static String url="jdbc:mysql://localhost:3306/javaee"+
+	private static String url="jdbc:mysql://localhost:3306/lost_and_found"+
             "?user=root&password+123456&characterEncoding=utf-8"
-			   +"&serverTimezone=GMT";
+			   +"&serverTimezone=UTC";
 	   private static String drivername="com.mysql.jdbc.Driver";
 	   static {
 		   try {
