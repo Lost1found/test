@@ -7,78 +7,45 @@
 <link href="css/style.css" type="text/css" rel="stylesheet"/>
 <title>失卡招领信息表</title>
 </head>
-<body>
-<div id="top">
-<h1>失卡招领</h1>
-</div>
-<!-- 导航 -->
-<div id="bar">
- <table class="table1">
-  <tr>
-	<td><a href="主界面.jsp">首页</a></td>
-	<td><a href="失卡招领.jsp">失卡招领</a></td>
-	<td><a href="寻卡启事.jsp">寻卡启事</a></td>
-	<td><a href="关于我们.jsp">关于我们</a></td>
-	<td><a href="留言板.jsp">留言板</a></td>
-  </tr>
- </table>
-</div>
-<!-- 中间部分 -->
-<div id="middle">
-<img alt="" src="images/12.png">
-<img alt="" src="images/11.png">
-</div>
+<body style="background-color:#f2e3eb;">
+  <jsp:include page="header.jsp">
+  <jsp:param value="" name=""/>
+  </jsp:include>
   <center>
      <font face="楷体" size="6" color="#00">失卡招领信息表</font>
-  <form name="foundingform" action="Foundingindex.jsp" onsubmit="return recheck(this)" method="post">
+  <form name="foundingform" action="失卡招领处理界面.jsp" onsubmit="return recheck(this)" method="post">
   <table align='center' cellspacing='0' cellpadding='4' border='1' width=800px height=500px bgcolor='#eaf4f9'>
   <tr>
     <td width=200px>拾主用户名：</td>
-    <td width=500px><input type="text" name="userName"
-    value="请输入您的用户名" onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
-    onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/></td>
+    <td width=500px><input type="text" name="userName"/></td>
   </tr>
   <tr>
     <td>拾主手机号：</td>
-    <td><input type="text" name="pickerPhone" id="pickerPhone"
-        value="请输入11位手机号" onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
-        onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/></td>
+    <td><input type="text" name="pickerPhone" id="pickerPhone"/></td>
   </tr>
   <tr>
     <td>拾主姓名：</td>
-    <td><input type="text" name="pickerName"
-     value="请输入真实姓名" onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
-     onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/></td>
+    <td><input type="text" name="pickerName"/></td>
   </tr>
   <tr>
     <td>捡拾地点：</td>
-    <td><input type="text" name="location"
-     value="请尽可能详细描述" onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
-     onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/></td>
+    <td><input type="text" name="location"/></td>
   </tr>
   <tr>
     <td>捡拾时间：</td>
-    <td><input type="text" name="time" id="time"
-     value="请按yyyy-MM-dd格式输入" onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
-     onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/></td>
+    <td><input type="text" name="time" id="time"/></td>
   </tr>
   <tr>
     <td>卡号：</td>
-    <td><input type="text" name="cardID"
-     value="请输入拾卡卡号" onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
-     onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/></td>
+    <td><input type="text" name="cardID"/></td>
   </tr>
   <tr>
     <td>失主姓名：</td>
-    <td><input type="text" name="ownerName"
-    value="请提供失主姓名" onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
-    onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/></td>
+    <td><input type="text" name="ownerName"/></td>
   </tr>
   <tr>
     <td>失主学校：</td>
-    <td><input type="text" name="ownerSchool"
-     value="请提供失主学校" onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
-     onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/></td>
+    <td><input type="text" name="ownerSchool"/></td>
   </tr>
   </table>
   <br/>
@@ -91,7 +58,7 @@
     <script type="text/javascript">
       function recheck(foundingform)
       {
-    	  if(huntingform.location.value==""||huntingform.cardID.value==""||huntingform.userName.value==""||huntingform.pickerName.value==""||huntingform.ownerSchool.value==""||huntingform.ownerName.value=="")
+    	  if(foundingform.location.value==""||foundingform.cardID.value==""||foundingform.userName.value==""||foundingform.pickerName.value==""||foundingform.ownerSchool.value==""||foundingform.ownerName.value=="")
       	{
       		 alert("不允许出现空项！");
       		 return false;
@@ -101,6 +68,7 @@
     	  if(p.length!=11)
     	  {
     		  alert("手机号必须为11位！");
+    		  return false;
     	  }
     	  var str=document.getElementById("time");
     	  if($isDate(str)){

@@ -9,6 +9,7 @@ public class Picker {
 	  private String picktime;
 	  private String ownerName;
 	  private String ownerSchool;
+	  private String check;
 	  public Picker() {
 		
 	  }
@@ -76,6 +77,11 @@ public class Picker {
 	public void setOwnerSchool(String ownerSchool) {
 		this.ownerSchool = ownerSchool;
 	}
-	  
+	public String getCheck() {
+		return check;
+	}
+	public void setCheck(String check) {
+		this.check = check;
+	}  
 }
 

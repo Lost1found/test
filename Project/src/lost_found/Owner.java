@@ -6,6 +6,7 @@ public class Owner {
 	private String ownerPhone;
 	private String ownerRealName;
 	private String ownerSchool;
+	private String check;
 	public Owner(){
 		
 	}
@@ -51,6 +52,12 @@ public class Owner {
 	}
 	public void setOwnerSchool(String ownerSchool) {
 		this.ownerSchool = ownerSchool;
+	}
+	public String getCheck() {
+		return check;
+	}
+	public void setCheck(String check) {
+		this.check = check;
 	}
 }
 

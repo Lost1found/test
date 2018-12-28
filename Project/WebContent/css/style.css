@@ -1,6 +1,6 @@
 body, ul, li, td { margin:0;padding:0; }/* 导航 ,去掉body，ul，li，td四周自带的边距*/
  
-#bar{ background-color: #000000; }/*导航条颜色*/
+#bar{ background-color: #ececec; }/*导航条颜色*/
 
 .table1 { 
 	margin: 0px auto;            /*居中*/
@@ -28,7 +28,7 @@ a:link {
 	font-size: 20px;
 	line-height: 150%;
 	font-weight: bold;
-	color: #FFFFFF;
+	color: #000000;
 	text-decoration: none;
 }
 a:visited {
@@ -36,13 +36,13 @@ a:visited {
 	font-size: 20px;
 	line-height: 150%;
 	font-weight: bold;
-	color: #CCCCCC;
+	color: #3d4078;
 	text-decoration: none;
 }
 a:hover {
 	color: #000000;
 	text-decoration: underline;
-	background-color: #ffe3c8;
+	background-color: #f9dbe3;
 }
 a:active {
 	color: #ff0000;
