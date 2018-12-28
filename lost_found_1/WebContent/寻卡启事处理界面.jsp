@@ -24,7 +24,7 @@
   }catch(ClassNotFoundException e){
 	  e.printStackTrace();
   }
-  String url="jdbc:mysql://127.0.0.1/lost_and_found?user=root&password=123456&characterEncoding=utf-8&serverTimezone=UTC";
+  String url="jdbc:mysql://127.0.0.1/lost_and_found?user=root&password=6504a.&characterEncoding=utf-8&serverTimezone=UTC";
   try{
 	  Connection con=DriverManager.getConnection(url);
 	  Statement statement=con.createStatement();

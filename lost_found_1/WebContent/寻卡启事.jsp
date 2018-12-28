@@ -30,38 +30,28 @@
 </div>
   <center>
     <font face="楷体" size="6" color="#00">寻卡启事信息表</font>
-  <form  name="huntingform" action="Huntingindex.jsp" onsubmit="return check(this);" method="post">
-  <table align='center' cellspacing='0' cellpadding='4' border='1' width=800px height=500px bgcolor='#eaf4f9' color=#000000>
+  <form  name="huntingform" action="寻卡启事处理界面.jsp" onsubmit="return check(this);" method="post">
+  <table align='center' cellspacing='0' cellpadding='4' border='1' width=800px height=400px bgcolor='#eaf4f9' color=#000000>
   <tr>
      <td>失主用户名：</td>
-     <td><input type="text" name="userName"
-    value="请输入您的用户名" onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
-    onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/></td>
+     <td><input type="text" name="userName"/></td>
    </tr>
    
    <tr>
       <td>卡号：</td>
-      <td><input type="text" name="cardID"
-    value="请输入您的卡号" onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
-    onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/></td>
+      <td><input type="text" name="cardID"/></td> 
    </tr>
    <tr>
        <td>失主手机号：</td>
-       <td><input type="text" name="Ownerphone" id="Ownerphone"
-    value="请输入您的11位手机号" onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
-    onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/></td>
+       <td><input type="text" name="Ownerphone" id="Ownerphone"/></td>
    </tr>
    <tr>
        <td>姓名：</td>
-       <td><input type="text" name="realName"
-       value="请输入您的真实姓名" onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
-       onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/></td>
+       <td><input type="text" name="realName"/></td>
    </tr>
    <tr>
        <td>学校：</td>
-       <td><input type="text" name="school"
-       value="请输入您的学校" onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
-       onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/></td>
+       <td><input type="text" name="school"/></td>
    </tr>
   </table> 
   <br/>
@@ -83,6 +73,7 @@
     	if(p.length!=11)
     	{
     		alert("手机号必须为11位！");
+    		return false;
     	}
     }
     </script>
