@@ -27,9 +27,8 @@
 	<img width="200px" height="140px" alt="" src="images/11.png">
   </div>
   <div style="margin-right:200px; margin-left: text-align:right;">
-	<img src="image/1.png"/>&emsp;<%=session.getAttribute("userName") %>
+	<%=session.getAttribute("username") %>
 	&emsp;&emsp;&emsp;&emsp;
-	<a href="login.jsp"><img src="image/2.png"/></a>
 	<br/>时间：<%=time%>
   </div>
 </div>

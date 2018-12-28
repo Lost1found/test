@@ -59,12 +59,12 @@ public class ValidateImageServlet extends HttpServlet {
 		 }catch(ClassNotFoundException e){
 			 e.printStackTrace();
 		 }
-		 String url="jdbc:mysql://127.0.0.1/java?user=root&password=6504a.&characterEncoding=utf-8&serverTimezone=UTC";
+		 String url="jdbc:mysql://127.0.0.1/lost_and_found?user=root&password=6504a.&characterEncoding=utf-8&serverTimezone=UTC";
 		 List<User> users=new ArrayList<User>();
 		 try{
 			    Connection con=DriverManager.getConnection(url);
 			    Statement statement=con.createStatement();	  
-		    	String sql="select userName,passWord,flag from users";
+		    	String sql="select Username,Password,flag from users";
 		    	ResultSet rs=statement.executeQuery(sql);
 		    	while(rs.next()){
 		    		User user=new User();
@@ -91,7 +91,9 @@ public class ValidateImageServlet extends HttpServlet {
 						for(User u:users) {
 							if("1".equals(u.getMark())&&u.getmUserName().equals(a1.getmUserName())&&u.getmPassWord().equals(a1.getmPassWord())) {
 								flag=true;
-								request.getRequestDispatcher("/main.jsp").forward(request,response);
+				    			HttpSession session=request.getSession();
+				    			session.setAttribute("username", username);
+								request.getRequestDispatcher("/管理员界面.jsp").forward(request,response);
 							}else {
 								out.print("<script>alert('用户名不存在或密码错误！');window.location.href='login.jsp'</script>");
 							}

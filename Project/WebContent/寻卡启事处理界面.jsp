@@ -40,7 +40,7 @@
 		 Owner u1=new Owner(cardID);
 		 for(Picker u:picker){
 			 if(u.getCard().equals(u1.getCardID())){
-				 out.print("失卡招领库中有你的失卡相关信息，不必发布信息，请直接联系！");
+				 out.print("<script>alert('匹配成功！');window.location.href='main.jsp'</script>");
 			 }else{
 				 String sqls="insert into card_hunting(OwnerName,CardID,OwnerPhone,Name,School) values(?,?,?,?,?) ";
 				 PreparedStatement pstmt=con.prepareStatement(sqls);
@@ -53,7 +53,7 @@
 				 rs.close();
 				 pstmt.close();
 				 con.close();
-				 out.print("提交成功");
+				 out.print("<script>alert('提交成功！');window.location.href='寻卡启事.jsp'</script>");
 			 }
 		 }
 	  }

@@ -17,7 +17,7 @@
     }
 </script>  																																																																				</script>
 </head>
-<body style="background: url(image/one.jpg)">
+<body style="background: url(images/two.jpg)">
 <% 
 	String rememberedUserName="";
 	String rememberedPassWord="";

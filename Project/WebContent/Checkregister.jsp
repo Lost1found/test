@@ -19,8 +19,8 @@
     PreparedStatement stmt = null;                       //建立数据库操作对象
     try{                                                 //使用try-catch捕捉异常
     	Class.forName("com.mysql.jdbc.Driver");        //加载JDBC-ODBC桥驱动程序
-    	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Lost_and_found?user=root&password=123456&characterEncoding=utf-8&serverTimezone=GMT"); //连接ODBC数据源
-    	stmt = conn.prepareStatement("insert into user(Username,Email,Password,name) values(?,?,?,?)");
+    	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/lost_and_found?user=root&password=6504a.&characterEncoding=utf-8&serverTimezone=GMT"); //连接ODBC数据源
+    	stmt = conn.prepareStatement("insert into users(Username,Email,Password,name) values(?,?,?,?)");
     	stmt.setString(1,name);
     	stmt.setString(2,email);
     	stmt.setString(3,password);

@@ -58,7 +58,7 @@
     <script type="text/javascript">
       function recheck(foundingform)
       {
-    	  if(foundingform.location.value==""||foundingform.cardID.value==""||foundingform.userName.value==""||foundingform.pickerName.value==""||foundingform.ownerSchool.value==""||foundingform.ownerName.value=="")
+    	  if(foundingform.time.value==""||foundingform.location.value==""||foundingform.cardID.value==""||foundingform.userName.value==""||foundingform.pickerName.value==""||foundingform.ownerSchool.value==""||foundingform.ownerName.value=="")
       	{
       		 alert("不允许出现空项！");
       		 return false;

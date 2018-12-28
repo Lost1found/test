@@ -43,7 +43,7 @@
 		  Picker u2=new Picker(cardId);
 		  for(Owner u:owner){
 			  if(u.getCardID().equals(u2.getCard())){
-				  out.print("寻卡启事库中有人丢失了这张卡，不必发布信息，请直接联系！");
+				  out.print("<script>alert('匹配成功！');window.location.href='main.jsp'</script>");
 			  }else{
 				  String sqls="insert into card_founding(pickerUser,pickerPhone,pickerName,pickLocation,pickTime,cardID,ownerName,ownerSchool) values(?,?,?,?,?,?,?,?)";
 				  PreparedStatement pstmt=con.prepareStatement(sqls);
@@ -59,7 +59,7 @@
 				  rs.close();
 				  pstmt.close();
 				  con.close();
-				  out.print("提交成功！");
+				  out.print("<script>alert('提交成功！');window.location.href='失卡招领.jsp'</script>");
 			  }
 		  }
 	  }
